@@ -74,11 +74,6 @@ app.patch("/posts/:id", async (req, res) => {
     let { id } = req.params
     let { profile, username, name } = req.body
     await Listing.findByIdAndUpdate(id ,{profile,username,name})
-    // console.log(id,newPro,newUser,newName);
-    // let posts = post.find((p) => id === p.id)
-    // posts.profile = newPro;
-    // posts.username = newUser;
-    // posts.name = newName;
     res.redirect("/posts")
 })
 
