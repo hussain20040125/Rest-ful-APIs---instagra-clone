@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Account</title>
+    <style>
+        
+        * {
+            color: aliceblue;
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            background-color: black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            /* height: 700px; */
+        }
+
+        nav {
+            display: flex;
+            background-color: rgb(15, 15, 15);
+            align-items: center;
+            height: 80px;
+            width: 100%;
+      
+        }
+
+        .logo {
+            height: 60px;
+        }
+        /* .logo2{
+            height: 60px;
+            position: relative;
+            top: 12px;
+
+        } */
+
+        .h1{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 15px;
+        }
+
+
+        .form {
+            height: 476px;
+            width: 503px;
+            background-color: rgb(12, 11, 11);
+            /* border: 2px solid black; */
+            border-radius: 12px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+        }
+        h1{
+            position: relative;
+            bottom: 70px;
+            border-bottom: 0.5px solid whitesmoke;
+        }
+
+        input {
+            padding: 12px;
+            width: 368px;
+            border: none;
+            border-radius: 6px;
+            background-color: rgb(24, 23, 23);
+
+        }
+
+        button {
+            width: 394px;
+            padding: 6px;
+            font-size: 19px;
+            background-color: rgb(14, 119, 240);
+            border: none;
+            border-radius: 6px;
+        }
+
+        button:hover {
+            background-color: rgb(63, 146, 241);
+        }
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img class="logo" src="/logo.png" alt="">
+        <img class="logo" src="/text.png" alt="">
+        <!-- <a href="http://localhost:8080/posts/new" class="addNew">Create Account +</a> -->
+        <!-- <h2>instagram Id </h2> -->
+    </nav>
+    <div class="body">
+     
+        <div class="form">
+            <h1>Edit your Account</h1>
+            
+            <form method="post" action="/posts/<%=a._id%>?_method=PATCH">
+                <!-- <input type="file" name="photo" accept="image/*">
+                <input type="submit" value="Upload"> -->
+                <label for="photo">
+                    <p>Enter the path of your image</p>
+                </label>
+                <br>
+                <input name="profile" id="photo"  value="<%=a.profile%>"><br><br>
+                <input type="text"  name="username" value="<%=a.username%>" required><br><br>
+                <input type="text"  name="name"  value="<%=a.name%>" required>
+                <br><br>
+                <button>Save</button>
+
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>

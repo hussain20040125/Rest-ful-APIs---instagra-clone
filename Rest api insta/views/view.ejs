@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>insta @<%=a.username%>
+    </title>
+    <link rel="stylesheet" href="/view.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <nav>
+        <img class="logo" src="/logo.png" alt="">
+        <img class="logo" src="/text.png" alt="">
+        <!-- <h2>instagram Id </h2> -->
+    </nav>
+    <div class="main">
+
+
+
+
+        <div class="box">
+
+            <div class="circul">
+                <div class="border">
+                    <a href="http://localhost:8080/posts/<%=a.id%>">
+                        <!-- <img class="ring" src="/ring.png" alt="">  -->
+                        <img class="profile" src="<%=a.profile%>" alt="">
+                    </a>
+                </div>
+            </div>
+            <div class="user">
+                <%=a.username%>
+            </div>
+            <div class="bio">
+                <%=a.name%>
+            </div>
+            <div class="btn">
+                <button class="follow">Follow</button>
+
+
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="button">
+        <form action="/posts/<%=a.id%>/edit" method="get">
+            <button class="EDbtn">Edit Profile</button> 
+        </form>
+        <form action="/posts/<%=a.id%>/delete?_method=DELETE" method="post">
+            <button class="EDbtn">Delete Account</button>
+        </form>
+    </div>
+    <script src="/app.js"></script>
+</body>
+
+</html>

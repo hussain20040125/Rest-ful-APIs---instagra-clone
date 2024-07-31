@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insta Posts</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <nav>
+        <img class="logo" src="/logo.png" alt="">
+        <img class="logo" src="/text.png" alt="">
+        <a href="http://localhost:8080/posts/new" class="addNew">Create Account +</a>
+        <!-- <h2>instagram Id </h2> -->
+    </nav>
+    <div class="main">
+       
+          
+  
+        <% for (const posts of post) { %>
+            <div class="box">
+                
+                <div class="circul">
+                    <div class="border">
+                        <a href="http://localhost:8080/posts/<%=posts._id%>">
+                        <!-- <img class="ring" src="/ring.png" alt="">  -->
+                        <img class="profile" src="<%=posts.profile%>" alt="">
+                    </a>
+                    </div>
+                </div>
+                <div class="user">
+                    <%=posts.username%>
+                </div>
+                <div class="bio">
+                    <%=posts.name%>
+                </div>
+                <div class="btn">
+                    <button class="follow">Follow</button>
+                   
+
+                </div>
+            </div>
+   
+           
+            <% } %>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
